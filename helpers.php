@@ -732,21 +732,6 @@ if ( ! function_exists('secure_asset'))
 	}
 }
 
-if ( ! function_exists('secure_url'))
-{
-	/**
-	 * Generate a HTTPS url for the application.
-	 *
-	 * @param  string  $path
-	 * @param  mixed   $parameters
-	 * @return string
-	 */
-	function secure_url($path, $parameters = array())
-	{
-		return url($path, $parameters, true);
-	}
-}
-
 if ( ! function_exists('snake_case'))
 {
 	/**
@@ -985,22 +970,6 @@ if ( ! function_exists('trans_choice'))
 	function trans_choice($id, $number, array $parameters = array(), $domain = 'messages', $locale = null)
 	{
 		return app('translator')->transChoice($id, $number, $parameters, $domain, $locale);
-	}
-}
-
-if ( ! function_exists('url'))
-{
-	/**
-	 * Generate a url for the application.
-	 *
-	 * @param  string  $path
-	 * @param  mixed   $parameters
-	 * @param  bool    $secure
-	 * @return string
-	 */
-	function url($path = null, $parameters = array(), $secure = null)
-	{
-		return app('url')->to($path, $parameters, $secure);
 	}
 }
 
